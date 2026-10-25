@@ -1,0 +1,44 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Raw and processed data (large files)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.json
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs (keep directory but not contents)
+logs/*.log
+
+# Reports (generated, can be regenerated)
+reports/*.txt
+reports/*.json
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environment secrets
+.env
+*.env

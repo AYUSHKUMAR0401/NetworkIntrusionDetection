@@ -1,0 +1,225 @@
+{
+  "model_type": "LogisticRegression",
+  "training_date": "2026-10-25T19:16:16.934184",
+  "random_seed": 42,
+  "test_size": 0.2,
+  "data_source": "synthetic",
+  "feature_names": [
+    "flow_duration",
+    "total_fwd_packets",
+    "total_backward_packets",
+    "total_length_of_fwd_packets",
+    "total_length_of_bwd_packets",
+    "fwd_packet_length_max",
+    "fwd_packet_length_min",
+    "fwd_packet_length_mean",
+    "fwd_packet_length_std",
+    "bwd_packet_length_max",
+    "bwd_packet_length_min",
+    "bwd_packet_length_mean",
+    "bwd_packet_length_std",
+    "flow_bytes_s",
+    "flow_packets_s",
+    "flow_iat_mean",
+    "flow_iat_std",
+    "flow_iat_max",
+    "flow_iat_min",
+    "fwd_iat_total",
+    "fwd_iat_mean",
+    "fwd_iat_std",
+    "fwd_iat_max",
+    "fwd_iat_min",
+    "bwd_iat_total",
+    "bwd_iat_mean",
+    "bwd_iat_std",
+    "bwd_iat_max",
+    "bwd_iat_min",
+    "fwd_psh_flags",
+    "bwd_psh_flags",
+    "fwd_urg_flags",
+    "bwd_urg_flags",
+    "fwd_header_length",
+    "bwd_header_length",
+    "fwd_packets_s",
+    "bwd_packets_s",
+    "min_packet_length",
+    "max_packet_length",
+    "packet_length_mean",
+    "packet_length_std",
+    "packet_length_variance",
+    "fin_flag_count",
+    "syn_flag_count",
+    "rst_flag_count",
+    "psh_flag_count",
+    "ack_flag_count",
+    "urg_flag_count",
+    "cwe_flag_count",
+    "ece_flag_count",
+    "down_up_ratio",
+    "average_packet_size",
+    "avg_fwd_segment_size",
+    "avg_bwd_segment_size",
+    "init_win_bytes_forward",
+    "init_win_bytes_backward",
+    "act_data_pkt_fwd",
+    "min_seg_size_forward",
+    "active_mean",
+    "active_std",
+    "active_max",
+    "active_min",
+    "idle_mean",
+    "idle_std",
+    "idle_max",
+    "idle_min"
+  ],
+  "n_features": 66,
+  "dropped_non_numeric_columns": [],
+  "label_mapping": {
+    "benign": 0,
+    "portscan": 1,
+    "ddos": 1,
+    "dos goldeneye": 1,
+    "bot": 1,
+    "dos hulk": 1,
+    "dos slowloris": 1,
+    "ftp-patator": 1,
+    "dos slowhttptest": 1,
+    "ssh-patator": 1,
+    "web attack - brute force": 1,
+    "infiltration": 1,
+    "heartbleed": 1
+  },
+  "binary_target": {
+    "column": "is_malicious",
+    "0": "Benign",
+    "1": "Malicious"
+  },
+  "train_samples": 4000,
+  "test_samples": 1000,
+  "train_class_distribution": {
+    "0": 2399,
+    "1": 1601
+  },
+  "test_class_distribution": {
+    "0": 600,
+    "1": 400
+  },
+  "contamination": {
+    "test_rows": 1000,
+    "duplicated_in_train": 0,
+    "contamination_pct": 0.0
+  },
+  "evaluation_metrics": {
+    "accuracy": 0.515,
+    "precision": 0.4130879345603272,
+    "recall": 0.505,
+    "f1": 0.4544431946006749,
+    "confusion_matrix": [
+      [
+        313,
+        287
+      ],
+      [
+        198,
+        202
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n      Benign       0.61      0.52      0.56       600\n   Malicious       0.41      0.51      0.45       400\n\n    accuracy                           0.52      1000\n   macro avg       0.51      0.51      0.51      1000\nweighted avg       0.53      0.52      0.52      1000\n",
+    "predict_time": 0.003014087677001953,
+    "roc_auc": 0.5178041666666666,
+    "true_positives": 202,
+    "false_positives": 287,
+    "false_negatives": 198,
+    "true_negatives": 313,
+    "meets_recall_threshold": false
+  },
+  "all_model_metrics": {
+    "LogisticRegression": {
+      "accuracy": 0.515,
+      "precision": 0.4130879345603272,
+      "recall": 0.505,
+      "f1": 0.4544431946006749,
+      "confusion_matrix": [
+        [
+          313,
+          287
+        ],
+        [
+          198,
+          202
+        ]
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n      Benign       0.61      0.52      0.56       600\n   Malicious       0.41      0.51      0.45       400\n\n    accuracy                           0.52      1000\n   macro avg       0.51      0.51      0.51      1000\nweighted avg       0.53      0.52      0.52      1000\n",
+      "predict_time": 0.003014087677001953,
+      "roc_auc": 0.5178041666666666,
+      "true_positives": 202,
+      "false_positives": 287,
+      "false_negatives": 198,
+      "true_negatives": 313,
+      "meets_recall_threshold": false
+    },
+    "DecisionTree": {
+      "accuracy": 0.496,
+      "precision": 0.37735849056603776,
+      "recall": 0.4,
+      "f1": 0.3883495145631068,
+      "confusion_matrix": [
+        [
+          336,
+          264
+        ],
+        [
+          240,
+          160
+        ]
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n      Benign       0.58      0.56      0.57       600\n   Malicious       0.38      0.40      0.39       400\n\n    accuracy                           0.50      1000\n   macro avg       0.48      0.48      0.48      1000\nweighted avg       0.50      0.50      0.50      1000\n",
+      "predict_time": 0.0021021366119384766,
+      "roc_auc": 0.4832458333333334,
+      "true_positives": 160,
+      "false_positives": 264,
+      "false_negatives": 240,
+      "true_negatives": 336,
+      "meets_recall_threshold": false
+    },
+    "RandomForest": {
+      "accuracy": 0.566,
+      "precision": 0.4076086956521739,
+      "recall": 0.1875,
+      "f1": 0.2568493150684932,
+      "confusion_matrix": [
+        [
+          491,
+          109
+        ],
+        [
+          325,
+          75
+        ]
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n      Benign       0.60      0.82      0.69       600\n   Malicious       0.41      0.19      0.26       400\n\n    accuracy                           0.57      1000\n   macro avg       0.50      0.50      0.48      1000\nweighted avg       0.52      0.57      0.52      1000\n",
+      "predict_time": 0.027062654495239258,
+      "roc_auc": 0.50875625,
+      "true_positives": 75,
+      "false_positives": 109,
+      "false_negatives": 325,
+      "true_negatives": 491,
+      "meets_recall_threshold": false
+    }
+  },
+  "selection_criteria": "Selected 'LogisticRegression' based on highest malicious-class F1-score among models meeting the minimum recall threshold of 80%.",
+  "min_recall_threshold": 0.8,
+  "package_versions": {
+    "pandas": "2.3.3",
+    "numpy": "1.26.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0"
+  },
+  "known_limitations": [
+    "Random train/test split does not account for temporal correlation in network flows.",
+    "CIC-IDS2017 contains many near-duplicate flows which may inflate test-set performance.",
+    "Model was trained on CIC-IDS2017 only \u2014 generalisation to other networks is not validated.",
+    "Data source: synthetic. Synthetic data does NOT represent real attack patterns."
+  ]
+}
